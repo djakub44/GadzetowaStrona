@@ -1,0 +1,219 @@
+:root{
+  /*background */
+    --backgroundcolor: url(img/interior2_wider_16x9.jpg);
+    --backgroundcatalog: url(img/tapeta_strona_ffffcc.png);
+    --backgroundkubek: url(img/background_kubek_1.png);
+  /* backgrounds start page*/
+    --backgroundStartPage1: url(img/b1.jpg);
+    --backgroundStartPage2: url(img/b2.jpg);
+    --backgroundStartPage3: url(img/b3.jpg);
+
+    /* Menu */
+    --MenuFontcolor: #F8F5E6;
+    --MenuBackgroundColor: #333;
+    --MenuBackgroundHoverColor: #442C2C;
+
+    /*  */
+    --fontcolor: black;
+    --thHoverColor: black;
+    --FontFamily: Verdana, serif;
+}
+
+html{
+  scroll-behavior: smooth;
+  }
+/*-----------------MENU-----------------*/
+
+/* ul */
+.Menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--MenuBackgroundColor);
+  opacity: 0.7;
+  /*display: flex;*/
+  height:max-content;
+
+}
+
+/* li */
+/* logo */
+.MenuLogo{
+  float:left;
+}
+.MenuLogo a img{
+  max-height: fit-content;
+}
+.MenuLogo a:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.MenuLogo a:not(:hover) {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.MenuItem a {
+  display:block;
+  color: var(--MenuFontcolor);
+  font-size:large;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  height:max-content;
+}
+
+/* other menu items */
+.MenuItem[alignment="left"]{
+  float:left;
+}
+.MenuItem[alignment="right"]{
+  float:right;
+}
+
+.MenuItem a {
+  display:block;
+  color: var(--MenuFontcolor);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+}
+
+.MenuItem a:hover {
+  background-color: var(--MenuBackgroundHoverColor);
+  color: var(--MenuFontcolor);
+  text-decoration:none;
+  transition: 0.3s;
+}
+.MenuItem a:not(:hover) {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.MenuItem a:active{
+  background-color: rgba(218, 165, 32, 0.296);
+}
+
+
+
+/*-----------------START PAGE-----------------*/
+.StartPage {
+ /* background: var(--backgroundkubek); */
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: left;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo{
+  width: 100%;
+  height: 100%;
+}
+
+.pergamin {
+  font-family: var(--FontFamily);
+  position:fixed;
+  float: right;
+  font-size:x-large;
+  color: var(--fontcolor)
+}
+
+.pergamin1{
+  background-color: gray;
+  height: 75%;
+}
+
+.pergamin2{
+  background-image: var(--backgroundStartPage1);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  height: 75%;
+  background-size: 100%; 
+}
+
+
+.pergamin3{
+  background-color: darkgray;
+  height: 75%;
+  
+}
+
+.pergamin4{
+  background-image: var(--backgroundStartPage2);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  height: 75%;
+  background-size: 100%; 
+}
+.pergamin5{
+  background-color: darkgray;
+  height: 75%;
+  
+}
+.pergamin6{
+  background-image: var(--backgroundStartPage3);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  height: 75%;
+  background-size: 100%; 
+}
+
+/*-----------------CATALOGS-----------------*/
+.DoPisania {
+  background: var(--backgroundcatalog);
+  background-attachment:fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  background-repeat:repeat;
+  background-size:auto;
+  background-position: center;
+}
+/* Table */
+.Catalog{
+  overflow-x:auto;
+  overflow-y: auto;
+  text-align: center;
+  
+}
+/* td */
+.CatalogItem{
+  width: 25%;
+  height: 25%;
+}
+.CatalogItem img{
+  width: 40%;
+  height: auto;
+}
+.CatalogItem img:hover{
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.CatalogItem img:not(:hover){
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/*-----------------CONTACT-----------------*/
+.Contact{
+  background: var(--backgroundcolor);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: left;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: whitesmoke
+}
