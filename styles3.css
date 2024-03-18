@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Menu Top */
+.MenuTop {
+    background-color: #343a40;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.MenuTopItem {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.MenuTopItem:hover {
+    transform: scale(1.1);
+}
+
+.MenuTopLogo img {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.MenuTopLogo img:hover {
+    transform: scale(1.1);
+}
+
+/* Menu */
+.Menu {
+    background-color: #212529;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.MenuLogo img {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.MenuLogo img:hover {
+    transform: scale(1.1);
+}
+
+.MenuItem {
+    margin: 0 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.MenuItem a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px;
+}
+
+.MenuItem:hover {
+    transform: scale(1.1);
+}
+
+.MenuItem:hover a {
+    color: #ffc107;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.mySlides:hover img {
+    transform: scale(1.05);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.text:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ffc107;
+}

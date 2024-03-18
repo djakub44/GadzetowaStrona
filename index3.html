@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gadżetowa Dama</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        /* Add your autumn color palette variables */
+        :root {
+            --autumn-primary: #FF7F50; /* Coral */
+            --autumn-secondary: #8B4513; /* SaddleBrown */
+            --autumn-tertiary: #FFD700; /* Gold */
+        }
+
+        /* Default color scheme */
+        body {
+            background-color: #ffffff; /* White */
+            color: #000000; /* Black */
+        }
+
+        /* Autumn color scheme */
+        body.autumn {
+            background-color: var(--autumn-primary);
+            color: #ffffff; /* White */
+        }
+
+        .MenuTop, .Menu {
+            background-color: var(--autumn-secondary);
+        }
+
+        .slideshow-container {
+            background-color: var(--autumn-tertiary);
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body class="StartPage">
+    <script src="slideshow.js"></script> 
+    
+    <div class="MenuTop">
+        <div class="MenuTopLogo" alignment="left"><a href="index.html" title="Home">
+            <img alt="Gadżetowa Dama" class="logo" title="Gadżetowa Dama" src="img/logo_150px.png">
+        </a></div>
+        <div class="MenuTopItem">Dama@gadzetowa.pl</div>
+        <div class="MenuTopItem">+48 123 456 789</div>
+        <div class="MenuTopItem">Adres?? Krakow</div>
+    </div>
+
+    <div class="Menu">
+        <div class="MenuLogo" alignment="left"><a href="index.html" title="Home">
+            <img alt="Gadżetowa Dama" class="logo" title="Gadżetowa Dama" src="img/menu_napis_ecru.png">
+        </a></div>
+        <div class="MenuItem" alignment="left"><a href="galeriapomyslow.html" title="Oferta katalogowa">Galeria pomysłów</a></div>
+        <div class="MenuItem" alignment="left"><a href="kontakt.html"  title="Kontakt">Kontakt</a></div>
+    </div> 
+
+    <div class="slideshow-container">
+        <!-- Slides content goes here -->
+    </div>
+
+    <!-- Slider for autumn color palette -->
+    <div class="color-slider-container">
+        <label for="color-slider">Autumn Color Palette:</label>
+        <input type="range" min="1" max="100" value="50" class="slider" id="color-slider">
+    </div>
+
+    <!-- Dots for slideshow -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the slider element
+            var slider = document.getElementById("color-slider");
+
+            // Listen for changes in the slider value
+            slider.addEventListener("input", function() {
+                var value = slider.value;
+                applyAutumnColors(value);
+            });
+        });
+
+        // Function to apply autumn color scheme based on slider value
+        function applyAutumnColors(value) {
+            var body = document.body;
+
+            // Calculate the color based on the slider value
+            var hue = Math.round(value * 1.2); // Adjust hue for color variation
+
+            // Update body class based on slider value
+            if (hue > 50) {
+                body.classList.add("autumn");
+            } else {
+                body.classList.remove("autumn");
+            }
+        }
+    </script>
+</body>
+
+</html>

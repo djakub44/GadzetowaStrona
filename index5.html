@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgio - Architect</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        header {
+            background-color: #f9f9f9; /* Light color */
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1001; /* Ensure header is above dark background */
+        }
+        .top-bar {
+            background-color: #f9f9f9; /* Light color */
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 70%; /* Adjusted width */
+            top: 0;
+            left: 15%; /* Adjusted left position */
+            z-index: 1000;
+            transition: background-color 0.5s ease, color 0.3s ease; /* Smooth transition for color change */
+        }
+        .top-bar.sticky {
+            position: fixed;
+            top: 0;
+            background-color: #222; /* Dark color */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add shadow when sticky */
+            width: 70%; /* Adjusted width */
+            left: 15%; /* Adjusted left position */
+            opacity: 50%;
+        }
+        .top-bar img {
+            width: 100px;
+        }
+        .top-bar a {
+            color: #333; /* Light color */
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+        .top-bar.sticky a {
+            color: #fff; /* Dark color */
+        }
+        .top-bar a:hover {
+            color: #666; /* Light color */
+        }
+        .top-bar.sticky a:hover {
+            color: #ccc; /* Dark color */
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #444;
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+        .top-bar.sticky h1,
+        .top-bar.sticky h2,
+        .top-bar.sticky h3 {
+            color: #fff; /* Dark color */
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            flex: 1 1 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f9f9f9; /* Light color */
+            color: #333;
+        }
+        body:before,
+        body:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 15%; /* Adjusted width */
+            background: #333;
+            z-index: -1;
+        }
+        body:before {
+            left: 0;
+        }
+        body:after {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar" id="topBar">
+        <img src="logo.png" alt="Giorgio Logo">
+        <a href="#portfolio1">Portfolio 1</a>
+        <a href="#portfolio2">Portfolio 2</a>
+        <a href="#portfolio3">Portfolio 3</a>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Welcome to Giorgio's Portfolio</h1>
+            <p>Discover the world of architectural excellence.</p>
+        </header>
+
+        <div class="section" id="about">
+            <h2>About Me</h2>
+            <p>My name is Giovanni Giorgio, but everyone calls me Giorgio. I am a passionate architect with a vision for creating timeless and innovative designs that inspire and captivate. With years of experience in the field, I have had the privilege of working on various projects ranging from residential buildings to iconic landmarks.</p>
+        </div>
+
+        <div class="section" id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="empire-state-building.jpg" alt="Empire State Building">
+                    <p>Designing the iconic Empire State Building</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="client.jpg" alt="Client Meeting">
+                    <p>Known for being friendly and helpful to clients</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="company-history.jpg" alt="Company History">
+                    <p>Established in [year], our company has a rich history of architectural excellence.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Giorgio Architects. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onscroll = function() {stickyFunction()};
+        var topBar = document.getElementById("topBar");
+        var sticky = topBar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset > sticky) {
+                topBar.classList.add("sticky");
+            } else {
+                topBar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

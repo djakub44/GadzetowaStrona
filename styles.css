@@ -1,4 +1,10 @@
 :root{
+
+  /*Gadzetowa Color Set*/
+    --GadzetowaBrown: #442c2c;
+    --GadzetowaEcru: #f8f5e6;
+    --GadzetowaGold: #ae8731;
+
   /*background */
     --backgroundcolor: url(img/interior2_wider_16x9.jpg);
     --backgroundcatalog: url(img/tapeta_strona_ffffcc.png);
@@ -10,9 +16,7 @@
     --backgroundStartPage3: url(img/b3.jpg);
 
     /* Menu */
-    --MenuFontcolor: #F8F5E6;
     --MenuBackgroundColor: #333;
-    --MenuBackgroundHoverColor: #442C2C;
 
     /*  */
     --fontcolor: black;
@@ -24,12 +28,54 @@ html{
   scroll-behavior: smooth;
   }
 /*-----------------MENU-----------------*/
+::-moz-selection { /* Code for Firefox */
+  color: var(--GadzetowaGold);
+  background: var(--GadzetowaBrown)
+}
 
+::selection {
+  color: var(--GadzetowaGold);
+  background: var(--GadzetowaBrown)
+}
+
+
+
+.MenuTop{
+  list-style-type: none;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--GadzetowaEcru);
+  height:max-content;
+  display:flex;
+}
+
+
+.MenuTopLogo{
+  float:left;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.MenuTopItem{
+  
+  float: right;
+  padding: 15px; 
+  color: var(--GadzetowaBrown);
+  text-align: center;
+  margin:auto;
+  
+  text-decoration:none;
+  font-size: x-large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+;}
 /* ul */
 .Menu {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
+  width: 80%;
   overflow: hidden;
   background-color: var(--MenuBackgroundColor);
   opacity: 0.7;
@@ -58,7 +104,7 @@ html{
 
 .MenuItem a {
   display:block;
-  color: var(--MenuFontcolor);
+  color: var(--GadzetowaEcru);
   font-size:large;
   text-align: center;
   padding: 14px 16px;
@@ -76,15 +122,15 @@ html{
 
 .MenuItem a {
   display:block;
-  color: var(--MenuFontcolor);
+  color: var(--GadzetowaEcru);
   text-align: center;
   padding: 14px 16px;
   text-decoration:none;
 }
 
 .MenuItem a:hover {
-  background-color: var(--MenuBackgroundHoverColor);
-  color: var(--MenuFontcolor);
+  background-color: var(--GadzetowaBrown);
+  color: var(--GadzetowaEcru);
   text-decoration:none;
   transition: 0.3s;
 }
@@ -101,18 +147,14 @@ html{
 
 /*-----------------START PAGE-----------------*/
 .StartPage {
-  /* background: var(--backgroundframe);*/
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  background-position: left;
+  /* background: var(--backgroundframe);
   top:0px;
   left:0px;
   width: 100%;
   height: 100%;
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; 
+ */
+  background-color: var(--GadzetowaEcru);
 }
 
 .logo{
@@ -144,7 +186,7 @@ html{
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: var(--GadzetowaEcru);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -160,12 +202,12 @@ html{
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: var(--GadzetowaBrown)
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: var(--GadzetowaBrown);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -189,14 +231,14 @@ html{
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--GadzetowaBrown);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: var(--GadzetowaGold)
 }
 
 /* Fading animation */
